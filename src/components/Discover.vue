@@ -1,7 +1,7 @@
 
 <template>
 <div id="container">
-    <songlist-title></songlist-title>
+    <songlist-title :title="'用音乐恢复你的早上'"></songlist-title>
    <songlist-module :list="SonglistModule"></songlist-module>
     <!-- 底部导航栏tabbar -->
     <tabaricon2  :active="0"></tabaricon2>
@@ -44,8 +44,6 @@ div.app-container{
 #container{
     margin:5px 0;
 }
-.carousel{
-    margin-top: 5px;
-}
+
 
 </style>

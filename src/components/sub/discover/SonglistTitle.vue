@@ -1,9 +1,24 @@
 <template>
     <div class="songlistTitle">
-        <p>用音乐开启你的早上</p>
+        <p>{{title}}</p>
         <img src="@/assets/btn/cm2_mine_moredot@2x.png" alt="">
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{}
+    },
+    props:{
+        title:{
+            type:String,
+            default:function(){
+                return ''
+            }
+        }
+    }
+}
+</script>
 <style>
 .songlistTitle{
     display: flex;
