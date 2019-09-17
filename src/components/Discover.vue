@@ -3,9 +3,10 @@
 <div id="container">
     <songlist-title :title="'用音乐恢复你的早上'"></songlist-title>
    <songlist-module :list="SonglistModule"></songlist-module>
+  
     <!-- 底部导航栏tabbar -->
     <tabaricon2  :active="0"></tabaricon2>
-
+    
 </div>
 </template>
 
@@ -16,12 +17,16 @@ import SonglistTitle from "@/components/sub/discover/SonglistTitle.vue"
 import SonglistModule from "@/components/sub/discover/SonglistModule.vue"
 
 
+
+
 export default {
     // Home里的子组件对象列表 注册组件
     components:{
         "tabaricon2":TabarIcon2, 
         SonglistModule ,
         SonglistTitle,
+        
+        
     },
     data(){
         return{

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        
+    <div>  
+      
         <tabaricon2 :active="3"></tabaricon2>
     </div>
 </template>
@@ -8,10 +8,12 @@
 
 import TabarIcon2 from "@/components/sub/Tabaricon/TabarIcon2.vue"
 
+
+
 export default {
     components:{
         "tabaricon2":TabarIcon2,
-       
+     
     },
 }
 </script>
