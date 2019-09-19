@@ -11,6 +11,11 @@ import Me from "./components/Me.vue"
 import Friend from "./components/Friend.vue"
 //Zh
 import Zh from "./components/Zh.vue"
+//Login
+import Login from "./components/login/Login.vue"
+//Phone
+import Phone from "./components/login/Phone.vue"
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -26,5 +31,9 @@ export default new Router({
     {path:'/Friend',component:Friend},
     //Zh
     {path:'/Zh',component:Zh},
+    //登录
+    {path:'/Login',component:Login},
+    //电话登录
+    {path:'/Phone',component:Phone},
   ]
 })
