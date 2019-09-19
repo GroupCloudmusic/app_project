@@ -1,9 +1,9 @@
 
 <template>
 <div id="container">
+    <classify :opts="classifylist"></classify>
     <songlist-title :title="'用音乐恢复你的早上'"></songlist-title>
     <songlist-module :list="SonglistModule"></songlist-module>
-    <classify :opts="classifylist"></classify>
   
     <!-- 底部导航栏tabbar -->
     <tabaricon2  :active="0"></tabaricon2>

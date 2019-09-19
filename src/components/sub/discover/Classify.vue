@@ -1,10 +1,8 @@
 <template>
   <div class="rootstyle">
     <div class="my-chosen" v-for="(item,index) of opts" :key="index" @click="jump">
-      <a href="">
-        <img :src="item.imgurl" alt="">
-        <p>{{item.name}}</p>
-      </a>
+      <img :src="item.imgurl" alt="">
+      <p>{{item.name}}</p> 
     </div>
   </div>
 </template>
@@ -28,7 +26,10 @@ export default {
     // },
   },
   methods:{
-    // this.$router.push("")
+    jump(){
+      this.$router.push("/friend")
+    }
+    
   },
   
 }
@@ -41,8 +42,8 @@ export default {
     display:flex;
     justify-content: space-around;
   }
-  a{
-    display:line-block;
+  .my-chosen{
+    
     width:100%;
     height:65px;
     text-decoration-line:none;
@@ -55,7 +56,6 @@ export default {
   p{
     font-size:10px;
     color:#333;
-    margin:-8px;
-    top:0;
+    
   }
 </style>
