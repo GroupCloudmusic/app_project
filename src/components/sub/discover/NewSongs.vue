@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 父面板 -->
-    <mt-tab-container v-mdel="active">
+    <mt-tab-container v-model="active">
       <!-- 子面板1 -->
       <mt-tab-container-item id="newDiscs">
         <div v-for="(item,index) of firstList" :key="index">
