@@ -1,6 +1,6 @@
 <template>
   <div class="rootstyle">
-    <div class="my-chosen" v-for="(item,index) of opts" :key="index">
+    <div class="my-chosen" v-for="(item,index) of opts" :key="index" @click="jump">
       <a href="">
         <img :src="item.imgurl" alt="">
         <p>{{item.name}}</p>
@@ -26,6 +26,9 @@ export default {
     //     ]
     //   }
     // },
+  },
+  methods:{
+    // this.$router.push("")
   },
   
 }
