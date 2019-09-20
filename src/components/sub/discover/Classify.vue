@@ -38,14 +38,14 @@ export default {
 <style scoped>
   .rootstyle{
     width:100%;
-    height:65px;
+    height:76px;
     display:flex;
     justify-content: space-around;
   }
   .my-chosen{
     
     width:100%;
-    height:65px;
+    height:100%;
     text-decoration-line:none;
     text-align:center;
   }
