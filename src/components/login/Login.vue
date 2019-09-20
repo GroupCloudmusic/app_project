@@ -27,19 +27,21 @@
                 <span class="lg_service">《隐私政策》</span>
             </div>
         </div>
-        <div class="lg_disable" v-show="showTips">
-            <img src="@/assets/login/cm2_icn_close@3x.png" alt="">
-            <p>请先勾选同意《服务条款》和 《隐私政策》</p>
-        </div>
+        <toast v-show="showTips" :detail="'请先勾选同意《服务条款》和 《隐私政策》'"></toast>
     </div>
 </template>
+
 <script>
+import Toast from "@/components/sub/login/Toast.vue"
 export default {
     data(){
         return{
             select:false,
             showTips:false
         }
+    },
+    components:{
+        Toast
     },
   methods:{
       goback:function(){
@@ -154,30 +156,7 @@ export default {
     left:81px;
     bottom:15px;;
 }
-.lg_disable{
-    background-color:rgba(0, 0, 0, .9);
-    color:#f5f5f5;
-    font-size:13px;
-    text-align: center;
-    width:180px;
-    border-radius: 5px;
-    padding:10px;
-    box-sizing: border-box;
-    position: absolute;
-    bottom:50%;
-    left:50%;
-    margin-left: -90px;
-    margin-top:-35px;
-}
-.lg_disable>img{
-    width:20px;
-    height:20px;
-    border:1px solid #fff;
-    border-radius: 50%;
-}
-.lg_disable>p{
-    margin-top:10px;
-}
+
 </style>
 
 
