@@ -19,6 +19,13 @@
         </div>
       </mt-tab-container-item>
     </mt-tab-container>
+    <!-- 选择面板键 -->
+    <div>
+      <div>新碟</div>
+      <span>|</span>
+      <div>新歌</div>
+      <div>歌单广场</div>
+    </div>
   </div>
 </template>
 
