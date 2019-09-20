@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="container">
     <!-- 父面板 -->
     <mt-tab-container v-model="active">
       <!-- 子面板1 -->
-      <mt-tab-container-item id="newDiscs">
+      <mt-tab-container-item id="newDiscs" class="newDiscs_list">
         <div v-for="(item,index) of firstList" :key="index">
           <img :src="item.imgurl" alt="">
           <p>{{item.sname}}</p>
@@ -11,7 +11,7 @@
         </div>
       </mt-tab-container-item>
       <!-- 子面板2 -->
-      <mt-tab-container-item id="newSongs">
+      <mt-tab-container-item id="newSongs" class="newSongs_list2">
         <div v-for="(item,index) of secondList" :key="index">
           <img :src="item.imgUrl" alt="">
           <p>{{item.sname}}</p>
@@ -19,13 +19,8 @@
         </div>
       </mt-tab-container-item>
     </mt-tab-container>
-    <!-- 选择面板键 -->
-    <div>
-      <div>新碟</div>
-      <span>|</span>
-      <div>新歌</div>
-      <div>歌单广场</div>
-    </div>
+
+    
   </div>
 </template>
 
@@ -43,6 +38,25 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .container{
+    text-align:center;
+  }
+  .newDiscs_list{
+    display:flex;
+    justify-content:space-around;
+  }
+  .newSongs_list2{
+    display:flex;
+    justify-content:space-around;
+  }
+  img{
+    width:100px;
+    height:100px;
+    border-radius:5px;
+  }
+  p{
+    color:#333;
+    font-size:12px;
+  }
 </style>
