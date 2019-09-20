@@ -7,7 +7,7 @@
         <span>|</span>
         <div id="newSongs" @click="song">新歌</div>
       </div>
-      <div class="recommend">新歌推荐</div>
+      <div class="recommend" @click="recommend">新歌推荐</div>
     </div>
 
     <!-- 父面板
@@ -55,11 +55,14 @@ export default {
     disc:function(){
       this.first=true;
       this.second=false;
-      
+
     },
     song(){
       this.second=true;
       this.first=false;
+    },
+    recommend(){
+      this.$router.push("/me");
     }
   }
 }
