@@ -27,7 +27,7 @@ export default {
   },
   methods:{
     jump(){
-      this.$router.push("/friend")
+      this.$router.push("/video")
     }
     
   },
