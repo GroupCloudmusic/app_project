@@ -63,7 +63,7 @@ export default {
       store:'./Video',
       paimai:'./Me',
       cart:'./Friend',
-      me:'./Zh'
+      me:'./Zh',
     }
   },
   created() {

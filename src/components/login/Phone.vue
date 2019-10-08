@@ -10,37 +10,45 @@
             </div>
             
         </div>
-        <login-btn class="ph_lgBtn" :detail="'下一步'" @click="next"></login-btn>
-        
+        <login-btn class="ph_lgBtn" :detail="'下一步'" :goNext="next"></login-btn>
+        <toast v-show="showTips" :detail="'手机号应该是11位数字'"></toast>
     </div>
 </template>
 <script>
 import LoginTitle from "@/components/sub/login/LoginTitle.vue"
 import LoginBtn from "@/components/sub/login/LoginBtn.vue"
+import Toast from "@/components/sub/login/Toast.vue"
 export default {
     components:{
         LoginTitle,
         LoginBtn,
+        Toast
     }, 
     data(){
         return{
             phoneNumber:"",
-            
+            showTips:false
         }
       
     },
     methods:{
       cleart:function(){
-          if(!this.phoneNumber==""){
+          if(this.phoneNumber!=""){
               this.phoneNumber="";
           }
       },
       next:function(){
+          if(!this.select){
+              this.showTips=true;
+              setTimeout(()=>{
+                  this.showTips=false
+              },1000)}
           var reg=/^[0-9]{11}$/;
           if(!reg.test(this.phoneNumber)){
+              
               return;
           }else{
-              this.$router.push("/discover")
+              this.$router.push("/Password")
           }
       }
     }  

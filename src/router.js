@@ -15,6 +15,7 @@ import Zh from "./components/Zh.vue"
 import Login from "./components/login/Login.vue"
 //Phone
 import Phone from "./components/login/Phone.vue"
+import Password from "./components/login/Password.vue"
 
 Vue.use(Router)
 export default new Router({
@@ -35,5 +36,6 @@ export default new Router({
     {path:'/Login',component:Login},
     //电话登录
     {path:'/Phone',component:Phone},
+    {path:'/Password',component:Password},
   ]
 })

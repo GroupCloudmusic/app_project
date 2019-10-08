@@ -1,5 +1,5 @@
 <template>
-    <div class="loginBtn">
+    <div class="loginBtn" @click="goNext">
         <div class="lb_btn">
             <p>{{detail}}</p>
         </div>
@@ -16,8 +16,14 @@ export default {
             default:function(){
                 return ''
             }
-        }
-    }
+        },
+        goNext:{type:Function}
+    },
+    // methods: {
+    //     goNext() {
+    //         this.$emit("click")
+    //     }
+    // }
 }
 </script>
 <style>
